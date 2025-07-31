@@ -1,0 +1,244 @@
+---
+layout: default
+---
+
+<div class="resume-container">
+  <header class="resume-header">
+    <h1>{{ site.data.timeline.site_title }}</h1>
+    <p class="lead">{{ site.data.timeline.site_subtitle }}</p>
+    <div class="resume-intro">
+      {{ content }}
+    </div>
+  </header>
+
+  <!-- Career Timeline Section -->
+  <section class="career-timeline-section">
+    <div class="section-header">
+      <h2>
+        <i class="{{ site.data.timeline.career_timeline.icon }}"></i>
+        {{ site.data.timeline.career_timeline.name }}
+      </h2>
+      <p>{{ site.data.timeline.career_timeline.description }}</p>
+    </div>
+
+    <div class="timeline-content">
+      <div class="timeline-line"></div>
+      
+      {% assign career_entries = site.data.career.entries | sort: 'date' | reverse %}
+      {% for entry in career_entries %}
+      <div class="timeline-entry" data-date="{{ entry.date }}">
+        <div class="timeline-marker" style="--track-color: {{ site.data.timeline.career_timeline.color }}">
+          <i class="{{ site.data.timeline.career_timeline.icon }}"></i>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-date">{{ entry.date | date: "%B %Y" }}</div>
+          <h3 class="timeline-title">{{ entry.title }}</h3>
+          <div class="timeline-company">{{ entry.company }} {% if entry.location %} • {{ entry.location }}{% endif %}</div>
+          {% if entry.duration %}
+          <div class="timeline-duration">{{ entry.duration }}</div>
+          {% endif %}
+          <p class="timeline-description">{{ entry.description }}</p>
+          
+          {% if entry.achievements %}
+          <div class="timeline-achievements">
+            <h4>Key Achievements:</h4>
+            <ul>
+              {% for achievement in entry.achievements %}
+              <li>{{ achievement }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          
+          {% if entry.skills %}
+          <div class="timeline-skills">
+            {% for skill in entry.skills %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          
+          <div class="timeline-meta">
+            {% if entry.status == 'current' %}
+            <span class="timeline-status current">Current Role</span>
+            {% endif %}
+            {% if entry.type %}
+            <span class="timeline-type">{{ entry.type | capitalize }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Learning & Development Section -->
+  <section class="learning-section">
+    <div class="section-header">
+      <h2>
+        <i class="{{ site.data.timeline.sections[0].icon }}"></i>
+        {{ site.data.timeline.sections[0].name }}
+      </h2>
+      <p>{{ site.data.timeline.sections[0].description }}</p>
+    </div>
+
+    <div class="learning-grid">
+      {% assign learning_entries = site.data.learning.entries | group_by: 'subtrack' %}
+      {% for group in learning_entries %}
+        {% assign subtrack_info = site.data.timeline.sections[0].subtracks | where: 'id', group.name | first %}
+        <div class="learning-category">
+          <h3>
+            <i class="{{ subtrack_info.icon }}"></i>
+            {{ subtrack_info.name }}
+          </h3>
+          <div class="learning-items">
+            {% assign sorted_items = group.items | sort: 'date' | reverse %}
+            {% for item in sorted_items %}
+            <div class="learning-card">
+              <div class="learning-date">{{ item.date | date: "%Y" }}{% if item.end_date %} - {{ item.end_date | date: "%Y" }}{% endif %}</div>
+              <h4>{{ item.title }}</h4>
+              {% if item.institution %}
+              <div class="learning-institution">{{ item.institution }}</div>
+              {% endif %}
+              {% if item.grade %}
+              <div class="learning-grade">{{ item.grade }}</div>
+              {% endif %}
+              {% if item.level %}
+              <div class="learning-level">{{ item.level }}</div>
+              {% endif %}
+              <p>{{ item.description }}</p>
+              
+              {% if item.achievements %}
+              <ul class="learning-achievements">
+                {% for achievement in item.achievements %}
+                <li>{{ achievement }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+              
+              {% if item.technologies %}
+              <div class="learning-tech">
+                {% for tech in item.technologies %}
+                <span class="tech-tag">{{ tech }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+              
+              {% if item.coursework %}
+              <div class="coursework">
+                <strong>Key Topics:</strong>
+                {% for course in item.coursework limit:4 %}
+                <span class="course-tag">{{ course }}</span>
+                {% endfor %}
+                {% if item.coursework.size > 4 %}
+                <span class="course-more">+{{ item.coursework.size | minus: 4 }} more</span>
+                {% endif %}
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Knowledge Sharing & Impact Section -->
+  <section class="contributions-section">
+    <div class="section-header">
+      <h2>
+        <i class="{{ site.data.timeline.sections[1].icon }}"></i>
+        {{ site.data.timeline.sections[1].name }}
+      </h2>
+      <p>{{ site.data.timeline.sections[1].description }}</p>
+    </div>
+
+    <div class="contributions-grid">
+      {% assign contribution_entries = site.data.contributions.entries | sort: 'date' | reverse %}
+      {% for entry in contribution_entries %}
+        {% assign subtrack_info = site.data.timeline.sections[1].subtracks | where: 'id', entry.subtrack | first %}
+        <div class="contribution-card">
+          <div class="contribution-header">
+            <div class="contribution-icon" style="--track-color: {{ site.data.timeline.sections[1].color }}">
+              <i class="{{ subtrack_info.icon }}"></i>
+            </div>
+            <div class="contribution-meta">
+              <div class="contribution-date">{{ entry.date | date: "%B %Y" }}</div>
+              <div class="contribution-type">{{ subtrack_info.name }}</div>
+            </div>
+          </div>
+          
+          <h3>{{ entry.title }}</h3>
+          {% if entry.organization %}
+          <div class="contribution-org">{{ entry.organization }}</div>
+          {% endif %}
+          {% if entry.platform %}
+          <div class="contribution-platform">{{ entry.platform }}</div>
+          {% endif %}
+          
+          <p>{{ entry.description }}</p>
+          
+          {% if entry.impact %}
+          <div class="contribution-impact">
+            <strong>Impact:</strong> {{ entry.impact }}
+          </div>
+          {% endif %}
+          
+          {% if entry.audience %}
+          <div class="contribution-audience">
+            <strong>Audience:</strong> {{ entry.audience }}
+          </div>
+          {% endif %}
+          
+          {% if entry.achievements %}
+          <div class="contribution-achievements">
+            <strong>Key Results:</strong>
+            <ul>
+              {% for achievement in entry.achievements %}
+              <li>{{ achievement }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          
+          {% if entry.technologies %}
+          <div class="contribution-tech">
+            {% for tech in entry.technologies %}
+            <span class="tech-tag">{{ tech }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          
+          {% if entry.status == 'ongoing' %}
+          <div class="contribution-status">
+            <span class="status-badge ongoing">Ongoing</span>
+          </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Add entrance animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, observerOptions);
+
+  // Observe timeline entries and cards
+  document.querySelectorAll('.timeline-entry, .learning-card, .contribution-card').forEach(el => {
+    observer.observe(el);
+  });
+});
+</script>

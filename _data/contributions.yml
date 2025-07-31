@@ -1,0 +1,70 @@
+# Knowledge sharing and contributions timeline
+entries:
+  - id: genai-workshop
+    date: "2023-01-01"
+    title: "GenAI 101 Workshop Designer & Instructor"
+    organization: "Thoughtworks"
+    subtrack: "teaching"
+    type: "workshop-series"
+    status: "ongoing"
+    duration: "2023 - Present"
+    description: "Monthly 8-hour comprehensive generative AI program"
+    audience: "200+ technical and non-technical participants"
+    format: "Monthly sessions"
+    topics:
+      - "Theoretical foundations of generative AI"
+      - "Practical applications and hands-on labs"
+      - "Industry best practices"
+      - "Ethical AI considerations"
+    achievements:
+      - "200+ participants trained"
+      - "Monthly recurring program"
+      - "High participant satisfaction"
+      - "Cross-functional audience"
+    tags: ["teaching", "workshop", "generative-ai", "training"]
+
+  - id: hackathon-win
+    date: "2024-03-01"
+    title: "Organization Hackathon Winner"
+    organization: "Thoughtworks"
+    subtrack: "speaking"
+    type: "competition"
+    status: "completed"
+    description: "AI in Software Delivery demonstration"
+    achievement: "Winner - Organization-level hackathon"
+    topic: "AI in Software Delivery"
+    tags: ["hackathon", "ai", "software-delivery", "competition"]
+
+  - id: merit-open-source
+    date: "2024-06-01"
+    title: "MERIT AI Evaluation Library"
+    platform: "PyPI"
+    subtrack: "open-source"
+    type: "library"
+    status: "published"
+    description: "Open-source AI evaluation and quality assurance platform"
+    repository: "merit-ai"
+    impact: "5 crore annual cost savings"
+    adoption: "Multiple development teams"
+    achievements:
+      - "Industry-recognized evaluation library"
+      - "Cost savings of 5 crore annually"
+      - "Adopted across multiple client projects"
+      - "Established industry best practices"
+    technologies: ["Python", "AI Evaluation", "Quality Assurance", "Open Source"]
+    tags: ["open-source", "ai-evaluation", "impact", "library"]
+
+  - id: ai-best-practices
+    date: "2024-08-01"
+    title: "AI Evaluation Best Practices"
+    subtrack: "publications"
+    type: "methodology"
+    status: "established"
+    description: "Industry best practices for AI evaluation"
+    scope: "Multiple client projects"
+    impact: "Organization-wide adoption"
+    achievements:
+      - "Established evaluation standards"
+      - "Adopted across client projects"
+      - "Industry recognition"
+    tags: ["best-practices", "ai-evaluation", "methodology", "standards"]

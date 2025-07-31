@@ -1,0 +1,50 @@
+# Career progression timeline
+entries:
+  - id: ml-engineer-tw
+    date: "2024-07-01"
+    title: "ML Engineer"
+    company: "Thoughtworks"
+    location: "India"
+    type: "role"
+    status: "current"
+    duration: "July 2024 - Present"
+    description: "Leading development of multi-tenant AI platform and generative AI solutions"
+    skills: ["LLMs", "VLMs", "RAG", "Python", "AWS", "Multi-tenant Architecture"]
+    achievements:
+      - "Led multi-tenant AI platform serving 12+ concurrent client deployments"
+      - "Achieved 99.5% uptime and sub-200ms response times"
+      - "97% reduction in processing time and 300% throughput improvement"
+      - "Built QA frameworks detecting bias in 99.2% of generated content"
+      - "RAG systems supporting 5000+ concurrent users"
+    tags: ["generative-ai", "llm", "production", "leadership"]
+
+  - id: data-scientist-intern-tw
+    date: "2023-06-01" 
+    title: "Data Scientist Intern"
+    company: "Thoughtworks Applied AI Research"
+    location: "India"
+    type: "role"
+    status: "completed"
+    duration: "June 2023 - March 2024"
+    description: "Part-time role during studies focusing on emerging AI technologies"
+    skills: ["Generative AI", "LLM Fine-tuning", "Agentic AI", "Research"]
+    achievements:
+      - "Pioneered generative AI applications 6-12 months before mainstream adoption"
+      - "Developed innovative evaluation and QA methodologies"
+      - "Built multi-modal agentic AI systems"
+      - "Research adopted across multiple client engagements"
+    tags: ["research", "generative-ai", "innovation", "internship"]
+
+  - id: graduation
+    date: "2024-05-01"
+    title: "Graduated B.E. AI & ML"
+    company: "B.M.S College of Engineering"
+    location: "Bangalore"
+    type: "milestone"
+    status: "completed"
+    description: "Graduated with 9.0/10.0 CGPA (Top 5% of class)"
+    achievements:
+      - "CGPA: 9.0/10.0"
+      - "Top 5% of graduating class"
+      - "Specialized in AI & Machine Learning"
+    tags: ["education", "achievement"]

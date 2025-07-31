@@ -1,0 +1,91 @@
+# Learning and education timeline
+entries:
+  # Education
+  - id: be-ai-ml
+    date: "2020-07-01"
+    end_date: "2024-05-01"
+    title: "B.E. in Artificial Intelligence & Machine Learning"
+    institution: "B.M.S College of Engineering"
+    location: "Bangalore"
+    subtrack: "education"
+    type: "degree"
+    status: "completed"
+    grade: "9.0/10.0 CGPA"
+    description: "Comprehensive program covering ML, DL, CV, NLP"
+    coursework:
+      - "Machine Learning"
+      - "Deep Learning" 
+      - "Computer Vision"
+      - "Natural Language Processing"
+      - "Data Structures & Algorithms"
+      - "Statistical Methods"
+      - "Linear Algebra"
+    achievements:
+      - "Top 5% of graduating class"
+      - "CGPA: 9.0/10.0"
+    tags: ["education", "ai", "ml", "academic"]
+
+  # Technical Skills Development (derived from resume)
+  - id: python-expertise
+    date: "2020-09-01"
+    title: "Python Programming Mastery"
+    subtrack: "skills"
+    type: "skill-development"
+    status: "ongoing"
+    level: "Expert"
+    description: "Advanced Python programming for AI/ML applications"
+    technologies: ["Python", "NumPy", "Pandas", "Scikit-learn"]
+    tags: ["programming", "python", "core-skill"]
+
+  - id: genai-specialization
+    date: "2023-01-01"
+    title: "Generative AI Specialization"
+    subtrack: "skills"
+    type: "skill-development"
+    status: "ongoing"
+    level: "Expert"
+    description: "Deep expertise in LLMs, VLMs, and generative AI systems"
+    technologies: ["LLMs", "VLMs", "Fine-tuning", "RAG", "Transformers"]
+    tags: ["generative-ai", "llm", "specialization"]
+
+  - id: cloud-mlops
+    date: "2023-06-01"
+    title: "Cloud & MLOps Proficiency"
+    subtrack: "skills"
+    type: "skill-development"
+    status: "ongoing"
+    level: "Proficient"
+    description: "Cloud platforms and ML operations"
+    technologies: ["AWS", "GCloud", "Azure", "Docker", "Jenkins"]
+    tags: ["cloud", "mlops", "devops"]
+
+  # Research Projects
+  - id: merit-platform
+    date: "2024-01-01"
+    title: "MERIT - AI Evaluation Platform"
+    subtrack: "research"
+    type: "project"
+    status: "completed"
+    description: "Comprehensive AI evaluation platform for quality assurance"
+    repository: "PyPI: merit-ai"
+    achievements:
+      - "50% reduction in model deployment time"
+      - "Open-sourced and adopted by multiple teams"
+      - "Automated bias detection and mitigation"
+      - "Multi-tenant environment support"
+    technologies: ["Python", "AI Evaluation", "Quality Assurance", "PyPI"]
+    tags: ["research", "open-source", "ai-evaluation", "platform"]
+
+  - id: rag-application
+    date: "2023-08-01"
+    title: "End-to-End RAG Application"
+    subtrack: "research"
+    type: "project"
+    status: "completed"
+    description: "First comprehensive RAG application in organization"
+    achievements:
+      - "Proof-of-concept to production deployment"
+      - "Organization-wide adoption"
+      - "Industry recognition"
+    technologies: ["RAG", "LLMs", "Vector Databases", "Production Deployment"]
+    tags: ["research", "rag", "production", "innovation"]

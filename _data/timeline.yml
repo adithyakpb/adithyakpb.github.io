@@ -1,0 +1,54 @@
+# Main timeline configuration
+site_title: "Adithya K P Bhat"
+site_subtitle: "ML Engineer - Generative AI & LLM Specialist"
+timeline_start_year: 2020
+current_year: 2025
+
+# Timeline shows career progression only
+career_timeline:
+  name: "Career Timeline"
+  icon: "fas fa-briefcase"
+  color: "#007bff"
+  description: "Professional journey and career milestones"
+
+# Separate sections for other areas
+sections:
+  - id: learning
+    name: "Learning & Development"
+    icon: "fas fa-graduation-cap"
+    color: "#28a745"
+    description: "Education, skills, research, and continuous learning"
+    layout: "grid"
+    subtracks:
+      - id: education
+        name: "Education"
+        icon: "fas fa-university"
+      - id: skills
+        name: "Technical Skills"
+        icon: "fas fa-code"
+      - id: research
+        name: "Research & Projects"
+        icon: "fas fa-flask"
+      - id: certifications
+        name: "Certifications"
+        icon: "fas fa-certificate"
+    
+  - id: contributions
+    name: "Knowledge Sharing & Impact"
+    icon: "fas fa-handshake"
+    color: "#dc3545"
+    description: "Teaching, writing, open-source, and community contributions"
+    layout: "cards"
+    subtracks:
+      - id: teaching
+        name: "Teaching & Training"
+        icon: "fas fa-chalkboard-teacher"
+      - id: open-source
+        name: "Open Source"
+        icon: "fab fa-github"
+      - id: writing
+        name: "Technical Writing"
+        icon: "fas fa-file-alt"
+      - id: speaking
+        name: "Speaking & Recognition"
+        icon: "fas fa-trophy"
