@@ -1,5 +1,28 @@
----
----
+--- ---
+
+/* CSS Custom Properties for Timeline */
+:root {
+  --heading-color: #2c3e50;
+  --text-color: #34495e;
+  --text-muted: #7f8c8d;
+  --link-color: #3498db;
+  --card-bg: #ffffff;
+  --border-color: #ecf0f1;
+  --tag-bg: #f8f9fa;
+  --tag-color: #495057;
+}
+
+/* Dark mode variables */
+[data-mode="dark"] {
+  --heading-color: #ecf0f1;
+  --text-color: #bdc3c7;
+  --text-muted: #95a5a6;
+  --link-color: #3498db;
+  --card-bg: #2c3e50;
+  --border-color: #34495e;
+  --tag-bg: #34495e;
+  --tag-color: #bdc3c7;
+}
 
 /* Resume Timeline Styles - Career Focused */
 .resume-container {
@@ -547,15 +570,15 @@
   .resume-container {
     padding: 1rem 0.5rem;
   }
-  
+
   .resume-header h1 {
     font-size: 2.2rem;
   }
-  
+
   .timeline-entry {
     flex-direction: column;
   }
-  
+
   .timeline-marker {
     width: 50px;
     height: 50px;
@@ -563,24 +586,24 @@
     margin-bottom: 1rem;
     align-self: flex-start;
   }
-  
+
   .timeline-line {
     display: none;
   }
-  
+
   .timeline-card {
     padding: 1.8rem;
   }
-  
+
   .learning-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .contributions-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .section-header h2 {
     font-size: 1.8rem;
   }
@@ -590,27 +613,27 @@
   .resume-header h1 {
     font-size: 1.8rem;
   }
-  
+
   .resume-intro {
     padding: 1.5rem;
   }
-  
+
   .timeline-card {
     padding: 1.5rem;
   }
-  
+
   .timeline-title {
     font-size: 1.2rem;
   }
-  
+
   .learning-card {
     padding: 1.5rem;
   }
-  
+
   .contribution-card {
     padding: 1.5rem;
   }
-  
+
   .skill-tag,
   .tech-tag,
   .course-tag {
@@ -670,16 +693,46 @@
 }
 
 /* Animation timing for better UX */
-.timeline-entry:nth-child(1) { transition-delay: 0.1s; }
-.timeline-entry:nth-child(2) { transition-delay: 0.2s; }
-.timeline-entry:nth-child(3) { transition-delay: 0.3s; }
-.timeline-entry:nth-child(4) { transition-delay: 0.4s; }
+.timeline-entry:nth-child(1) {
+  transition-delay: 0.1s;
+}
 
-.learning-card:nth-child(1) { transition-delay: 0.1s; }
-.learning-card:nth-child(2) { transition-delay: 0.2s; }
-.learning-card:nth-child(3) { transition-delay: 0.3s; }
+.timeline-entry:nth-child(2) {
+  transition-delay: 0.2s;
+}
 
-.contribution-card:nth-child(1) { transition-delay: 0.1s; }
-.contribution-card:nth-child(2) { transition-delay: 0.2s; }
-.contribution-card:nth-child(3) { transition-delay: 0.3s; }
-.contribution-card:nth-child(4) { transition-delay: 0.4s; }
+.timeline-entry:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.timeline-entry:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.learning-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.learning-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.learning-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.contribution-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.contribution-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.contribution-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.contribution-card:nth-child(4) {
+  transition-delay: 0.4s;
+}

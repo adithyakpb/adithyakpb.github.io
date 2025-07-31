@@ -83,16 +83,19 @@ layout: default
     </div>
 
     <div class="learning-grid">
-      {% assign learning_entries = site.data.learning.entries | group_by: 'subtrack' %}
-      {% for group in learning_entries %}
-        {% assign subtrack_info = site.data.timeline.sections[0].subtracks | where: 'id', group.name | first %}
+      {% assign learning_entries = site.data.learning.entries %}
+      {% assign subtracks = site.data.timeline.sections[0].subtracks %}
+      
+      {% for subtrack in subtracks %}
+        {% assign subtrack_entries = learning_entries | where: "subtrack", subtrack.id %}
+        {% if subtrack_entries.size > 0 %}
         <div class="learning-category">
           <h3>
-            <i class="{{ subtrack_info.icon }}"></i>
-            {{ subtrack_info.name }}
+            <i class="{{ subtrack.icon }}"></i>
+            {{ subtrack.name }}
           </h3>
           <div class="learning-items">
-            {% assign sorted_items = group.items | sort: 'date' | reverse %}
+            {% assign sorted_items = subtrack_entries | sort: 'date' | reverse %}
             {% for item in sorted_items %}
             <div class="learning-card">
               <div class="learning-date">{{ item.date | date: "%Y" }}{% if item.end_date %} - {{ item.end_date | date: "%Y" }}{% endif %}</div>
@@ -139,6 +142,7 @@ layout: default
             {% endfor %}
           </div>
         </div>
+        {% endif %}
       {% endfor %}
     </div>
   </section>
@@ -157,6 +161,7 @@ layout: default
       {% assign contribution_entries = site.data.contributions.entries | sort: 'date' | reverse %}
       {% for entry in contribution_entries %}
         {% assign subtrack_info = site.data.timeline.sections[1].subtracks | where: 'id', entry.subtrack | first %}
+        {% if subtrack_info %}
         <div class="contribution-card">
           <div class="contribution-header">
             <div class="contribution-icon" style="--track-color: {{ site.data.timeline.sections[1].color }}">
@@ -215,6 +220,7 @@ layout: default
           </div>
           {% endif %}
         </div>
+        {% endif %}
       {% endfor %}
     </div>
   </section>
