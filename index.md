@@ -1,9 +1,13 @@
 ---
-layout: timeline
-title: Adithya K P Bhat
+layout: timeline-simple
+title: "Adithya K P Bhat"
+subtitle: "ML Engineer - Generative AI & LLM Specialist"
+permalink: /
 ---
 
-Welcome to my **professional journey**. I'm an ML Engineer specializing in Generative AI and LLM systems, with expertise in building production-ready AI platforms.
+# Welcome to my **professional journey**
+
+I'm an ML Engineer specializing in Generative AI and LLM systems, with expertise in building production-ready AI platforms.
 
 ## My Professional Story
 
@@ -13,4 +17,4 @@ Welcome to my **professional journey**. I'm an ML Engineer specializing in Gener
 
 **Knowledge Sharing & Impact** demonstrates my commitment to community growth through teaching 200+ participants, open-source contributions with 5 crore cost savings, and industry best practices establishment.
 
-This comprehensive view illustrates how continuous learning, hands-on building, and knowledge sharing create a virtuous cycle of growth in the AI field.
+This comprehensive view illustrates how continuous learning, hands-on building, and knowledge sharing create a virtuous cycle of growth in the AI field. 

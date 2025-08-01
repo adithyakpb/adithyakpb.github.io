@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<div class="resume-container">
+  <!-- Header -->
+  <header class="resume-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="lead">{{ page.subtitle }}</p>
+    {% endif %}
+  </header>
+
+  <!-- Main Content -->
+  <div class="content-section">
+    {{ content }}
+  </div>
+
+  <!-- Career Timeline -->
+  {% if site.data.career.entries %}
+  <section class="career-section">
+    <h2>Career Timeline</h2>
+    <div class="timeline">
+      {% assign career_entries = site.data.career.entries | sort: 'date' | reverse %}
+      {% for entry in career_entries %}
+      <div class="timeline-item">
+        <div class="timeline-date">{{ entry.date | date: "%B %Y" }}</div>
+        <div class="timeline-content">
+          <h3>{{ entry.title }}</h3>
+          <p class="company">{{ entry.company }}</p>
+          <p>{{ entry.description }}</p>
+          {% if entry.achievements %}
+          <ul>
+            {% for achievement in entry.achievements %}
+            <li>{{ achievement }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Learning Section -->
+  {% if site.data.learning.entries %}
+  <section class="learning-section">
+    <h2>Learning & Development</h2>
+    <div class="learning-grid">
+      {% assign learning_entries = site.data.learning.entries | sort: 'date' | reverse %}
+      {% for entry in learning_entries %}
+      <div class="learning-card">
+        <h3>{{ entry.title }}</h3>
+        <p class="date">{{ entry.date | date: "%Y" }}</p>
+        <p>{{ entry.description }}</p>
+        {% if entry.technologies %}
+        <div class="tags">
+          {% for tech in entry.technologies %}
+          <span class="tag">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Contributions Section -->
+  {% if site.data.contributions.entries %}
+  <section class="contributions-section">
+    <h2>Knowledge Sharing & Impact</h2>
+    <div class="contributions-grid">
+      {% assign contribution_entries = site.data.contributions.entries | sort: 'date' | reverse %}
+      {% for entry in contribution_entries %}
+      <div class="contribution-card">
+        <h3>{{ entry.title }}</h3>
+        <p class="date">{{ entry.date | date: "%B %Y" }}</p>
+        <p>{{ entry.description }}</p>
+        {% if entry.achievements %}
+        <ul>
+          {% for achievement in entry.achievements %}
+          <li>{{ achievement }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div> 
