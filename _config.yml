@@ -111,7 +111,7 @@ comments:
   provider: giscus
   giscus:
     repo: adithyakpb/adithyakpb.github.io
-    repo_id: 1029913638  # Get this from GitHub API
+    repo_id: 1029913638 # Get this from GitHub API
     category: General
     mapping: pathname
     strict: 0
@@ -208,10 +208,10 @@ exclude:
   - "package*.json"
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [channels, tags]
   layouts:
-    category: category
+    channel: channel
     tag: tag
   permalinks:
     tag: /tags/:name/
-    category: /categories/:name/
+    channel: /channels/:name/
